@@ -1,9 +1,10 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-// import signup from "./components/sighnup";
 import Navbar from "./components/Navbar";
+import Post from "./components/Post";
 import CreateAccount from "./components/CreateAccount";
-// import login from "./components/login"
+import Home from "./components/Home";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -12,15 +13,12 @@ function App() {
         <h1>Stranger's Things</h1>
         <Navbar />
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          {/* <Route path="/Log in" element={<h1>Log in</h1>} /> */}
+          {/* <Route path="/" element={<h1>Home</h1>} /> */}
+          <Route path="/Post" element={<Post />} />
+          <Route path="/Navbar" element={<Navbar />} />
           <Route path="/CreateAccount" element={<CreateAccount />} />
-          {/* <Route path="/CreateAccount" element={<h1>Create Account</h1>} /> */}
-          <Route path="/Post" element={<h1>Post</h1>} />
-          <Route path="/Message" element={<h1>Message</h1>} />
-          <Route path="/Log Out" element={<h1>Log Out</h1>} />
-
-          {/* <Route path="/:id" element={<Something />} /> */}
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </div>
     </>

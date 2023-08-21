@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from "react";
+import { fetchAllPosts } from "../API/index";
 
 //how the form pg will look like
 
@@ -6,55 +8,38 @@ export default function CreateAccountForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setconfirmPassword] = useState("");
-  // const [error, setError] = useState(null);
 
-  // async function handleSubmit(event) {
-  //   event.preventDefault();
-  //   console.log("Hello peeps");
-
-  //   try {
-  //     const response = await fetch(`${BASE_URL}/CreateAccount`, { //something here might be wrong
-  //       method: "POST",
-  //       body: JSON.stringify({ username }, { password }, { confirmpassword }),
-  //     });
-  //     const result = await response.json();
-  //     console.log(result.token);
-  //     setToken(result.token);
-  //   } catch (error) {
-  //     setError(error.message);
-  //   }
-  // }
-  // handleSubmit();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(username, password, confirmpassword);
+  };
 
   const handleInputChange = (event) => {
     const { id, value } = event.target;
     if (id === "firstName") {
-      setFirstName(value);
+      setUsername(value);
     }
     if (id === "password") {
       setPassword(value);
     }
     if (id === "confirmPassword") {
-      setConfirmPassword(value);
+      setconfirmPassword(value);
     }
-  };
-
-  const handleSubmit = () => {
-    console.log(userName, password, confirmpassword);
   };
 
   return (
     <div className="Sign up form">
       <div className="form-body">
-        <div className="text">{action}</div>
+        <div className="text"></div>
 
         <div className="username">
           <label for="userName">User Name </label>
           <input
             type="text"
-            id="userName"
-            placeholder="username"
             value={username}
+            name="userName"
+            id="userName"
+            placeholder="hummas"
             onChange={(e) => handleInputChange(e.target.value)}
           />
         </div>
@@ -63,9 +48,10 @@ export default function CreateAccountForm() {
           <label for="password">Password </label>
           <input
             type="password"
-            id="password"
-            placeholder="password"
+            name="password"
             value={password}
+            id="password"
+            placeholder="****"
             onChange={(e) => handleInputChange(e.target.value)}
           />
         </div>
@@ -73,10 +59,11 @@ export default function CreateAccountForm() {
         <div className="confirm-password">
           <label for="confirmPassword">Confirm Password </label>
           <input
-            type="password"
-            id="confirmPassword"
-            placeholder="confirmpassword"
+            type="confirmpassword"
+            name="confirmpassword"
             value={confirmpassword}
+            id="confirmPassword"
+            placeholder="*****"
             onChange={(e) => handleInputChange(e.target.value)}
           />
         </div>
