@@ -16,7 +16,7 @@ const POST_URL =
 
 export async function fetchAllPost() {
   try {
-    const response = await fetch(`${BASE_URL}/posts`);
+    const response = await fetch(`${BASE_URL}`);
     const result = await response.json();
     return result;
   } catch (error) {
