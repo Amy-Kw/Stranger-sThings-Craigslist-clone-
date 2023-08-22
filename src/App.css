@@ -18,6 +18,10 @@
 }
 .insideplaceholder {
   background-color: aliceblue;
+  display: inline-block;
+  margin: 0.25rem;
+  justify-content: space-evenly;
+  text-decoration: none;
 }
 
 .buttoncolor {

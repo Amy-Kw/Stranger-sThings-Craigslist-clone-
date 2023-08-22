@@ -1,3 +1,5 @@
+//this page suppose to be the  login before accessing the site
+
 import React, { useState } from "react";
 import { Login } from "./components/Login";
 import CreateAccount from "./components/CreateAccount";

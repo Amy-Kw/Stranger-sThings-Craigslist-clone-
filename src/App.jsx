@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Post from "./components/Post";
 import CreateAccount from "./components/CreateAccount";
-// import Home from "./components/Home";
+// import Home from "./components/Home";  //not sure why but each time I activate this, it crashes the browser, saying this file does not exsits.
 import Login from "./components/Login";
 
 function App() {

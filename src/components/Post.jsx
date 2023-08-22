@@ -38,17 +38,3 @@ export default function allPosts() {
     </div>
   );
 }
-
-// const seeAllPost = async () => {
-//     try{
-//         const response = await fetch (`${POST_URL}`, {
-
-//         }
-//     }
-// }
-
-// const handleAddNewPost = async () => {
-//     try {
-//      const response = await fetch(`${BASE_URL}/posts`, {
-//       method: "POST",
-//       headers: {
