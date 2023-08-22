@@ -1,14 +1,21 @@
-import { useState } from "react";
-import React from "react";
-import Login from "./components/Login";
-import CreateAccount from "./CreateAccount";
+import React, { useState } from "react";
+import { Login } from "./components/Login";
+import CreateAccount from "./components/CreateAccount";
 
 function Homepage() {
-  const [currentForm, setCurrentForm] = useState("login");
+  const [currentForm, setCurrentForm] = useState("Login");
+
+  const currentFormtoggle = (formName) => {
+    setCurrentForm(formName);
+  };
 
   return (
     <div className="Homepage">
-      {currentForm === "login" ? <Login /> : <CreateAccount />}
+      {currentForm === "Login" ? (
+        <Login onFormSwitch={currentFormtoggle} />
+      ) : (
+        <CreateAccount onFormSwitch={currentFormtoggle} />
+      )}
     </div>
   );
 }

@@ -7,8 +7,8 @@ export default function Navbar() {
       <Link to="/CreateAccount">Create an account</Link>
       <Link to="/Post">Posts</Link>
       <Link to="/Message">Message</Link>
-      <Link to="/Log Out">Log Out</Link>
-      <Link to="/Log Out">Log in</Link>
+      <Link to="/LogOut">Log Out</Link>
+      <Link to="/Login">Log in</Link>
     </div>
   );
 }

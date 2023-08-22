@@ -76,3 +76,7 @@ a:link {
   margin: 10px;
   justify-content: space-evenly;
 }
+
+* {
+  background-color: rgb(134, 120, 223);
+}
